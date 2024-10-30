@@ -64,3 +64,23 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Important
+* When preparing .env file, just copy the contents of .env.example file and changes these values:
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=name_of_db
+DB_USERNAME=username_of_db
+DB_PASSWORD=password_of_db
+```
+
+* When we want to run the code, insert these commands:
+```
+composer install
+php artisan migrate:fresh --seed
+php artisan storage:link
+php artisan key:generate
+php artisan serve
+```
